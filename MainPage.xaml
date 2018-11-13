@@ -9,9 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="#FF6D83BC">
-        <TextBox x:Name="MainEditor" Margin="16,48,16,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="661" AcceptsReturn="True"/>
+        <TextBox x:Name="MainEditor" Margin="16,48,16,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="661" AcceptsReturn="True"/>
         <Button x:Name="btnNEW" Content="New File" HorizontalAlignment="Left" Margin="18,8,0,0" VerticalAlignment="Top" Width="140" Foreground="White" Click="btnNEW_Click"/>
-        <Button x:Name="btnLOAD" Content="Load File" HorizontalAlignment="Left" Margin="178,9,0,0" VerticalAlignment="Top" Width="140" Foreground="White"/>
+        <Button x:Name="btnLOAD" Content="Load File" HorizontalAlignment="Left" Margin="178,9,0,0" VerticalAlignment="Top" Width="140" Foreground="White" Click="btnLOAD_Click"/>
         <Button x:Name="btnSAVE" Content="Save File" HorizontalAlignment="Left" Margin="338,9,0,0" VerticalAlignment="Top" Width="140" Foreground="White" Click="btnSAVE_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="825,4,0,0" TextWrapping="Wrap" Text="Lars' Superworditor 2018" VerticalAlignment="Top" Height="41" Width="437" FontStyle="Italic" FontWeight="Bold" FontFamily="Source Sans Pro Semibold" FontSize="36" Foreground="White" SelectionChanged="TextBlock_SelectionChanged" ManipulationMode="None" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False"/>
 
