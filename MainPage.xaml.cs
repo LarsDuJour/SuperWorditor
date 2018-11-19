@@ -86,8 +86,6 @@ namespace SuperWorditor
 
         private async void btnLOAD_Click(object sender, RoutedEventArgs e)
         {
-            MainEditor.Text = "";
-
             FileOpenPicker openPicker = new FileOpenPicker();
             openPicker.ViewMode = PickerViewMode.Thumbnail;
             openPicker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
@@ -95,8 +93,11 @@ namespace SuperWorditor
             StorageFile file = await openPicker.PickSingleFileAsync();
             if (file != null)
             {
+                MainEditor.Text = "";
+
                 // Application now has read/write access to the picked file
-                MainEditor.Text = file.OpenSequentialReadAsync().ToString();
+                string temp = await Windows.Storage.FileIO.ReadTextAsync(file);
+                MainEditor.Text = temp;
             }
         }
 
