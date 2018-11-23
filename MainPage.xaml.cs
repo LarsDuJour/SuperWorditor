@@ -86,6 +86,11 @@ namespace SuperWorditor
 
         private async void btnLOAD_Click(object sender, RoutedEventArgs e)
         {
+            await Loading();
+        }
+
+        private async Task Loading()
+        {
             FileOpenPicker openPicker = new FileOpenPicker();
             openPicker.ViewMode = PickerViewMode.Thumbnail;
             openPicker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
@@ -100,6 +105,5 @@ namespace SuperWorditor
                 MainEditor.Text = temp;
             }
         }
-
     }
 }
